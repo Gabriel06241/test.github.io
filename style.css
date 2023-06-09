@@ -33,7 +33,7 @@ body:focus {
    justify-content: center;
    align-items: center;
    border-radius: 20%;
-   border: 0.5px solid #cccece;
+   border: 0.5px solid #33b2b2;
 }
 
 .cell-format-background {
@@ -41,12 +41,12 @@ body:focus {
    border-radius: 30%;
    margin: 55px;
    /* border: 0px; */
-   background-color: #cccece;
+   background-color: #33b2b2;
    /* background-color: aquamarine; */
 }
 
 .cell-format:hover {
-   background-color: #cccece;
+   background-color: #33b2b2;
    /* background-color: aquamarine; */
 }
 

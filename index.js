@@ -98,6 +98,7 @@ clean.addEventListener("click", () => {
     console.log('clicked!!!')
     cell.forEach(e => {
         e.classList.remove("strickout");
+        e.classList.remove("cell-format-background");
     })
 })
 
