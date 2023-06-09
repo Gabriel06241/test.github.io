@@ -46,8 +46,10 @@ body:focus {
 }
 
 .cell-format:hover {
-   background-color: #33b2b2;
+   background-color: rgba(52, 178, 178, 0.3);
+   /* background-color: #fcfcfc; */
    /* background-color: aquamarine; */
+   /* pointer-events: none; */
 }
 
 .letter-div {
@@ -64,8 +66,8 @@ body:focus {
 }
 
 .strickout {
-   text-decoration: line-through;
-   color: #a6a3a3;
+   /* text-decoration: line-through; */
+   color: #fcfcfc;
    font-size: 18pt;
    /* pointer-events: none; */
 }
@@ -93,4 +95,20 @@ body:focus {
 footer {
    text-align: center;
    margin: 20px;
+}
+
+button {
+   background-color: #33b2b2; /* Green */
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   font-weight: bold;
+}
+
+button:hover {
+   background-color: rgba(25, 185, 185, 0.8);
 }
