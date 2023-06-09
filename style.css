@@ -1,0 +1,96 @@
+body {
+   margin: auto;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body:focus {
+   outline: none;
+}
+
+.container {
+   /* width: 100vw; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#tblbingo {
+   border-collapse: collapse;
+   height: 40rem;
+   width: 40rem;
+   text-align: center;
+   font-size: 22pt;
+   cursor: pointer;
+}
+
+#tblbingo td {
+   padding: 0.5rem;
+}
+
+.cell-format {
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 20%;
+   border: 0.5px solid #cccece;
+}
+
+.cell-format-background {
+   /* height: 100%; */
+   border-radius: 30%;
+   margin: 55px;
+   /* border: 0px; */
+   background-color: #cccece;
+   /* background-color: aquamarine; */
+}
+
+.cell-format:hover {
+   background-color: #cccece;
+   /* background-color: aquamarine; */
+}
+
+.letter-div {
+   height: 20vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.letters-bingo {
+   padding: 0 1.3rem;
+   font-size: 40pt;
+   display: none;
+}
+
+.strickout {
+   text-decoration: line-through;
+   color: #a6a3a3;
+   font-size: 18pt;
+   /* pointer-events: none; */
+}
+
+.show-bingo {
+   display: inline;
+}
+
+.table-title {
+   font-size: 24pt;
+   font-weight: bold;
+}
+
+.table-subtitle {
+   font-size: 12pt;
+}
+
+.cell-bingo-background {
+   background-image: url('images/bingo.png');
+   /* background-size: cover; */
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+}
+
+footer {
+   text-align: center;
+   margin: 20px;
+}
