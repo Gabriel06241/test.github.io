@@ -113,7 +113,8 @@ letterB.addEventListener("click", () => {
     if (hasCellChecked) {
         return alert(promptMessage);
     }
-    let columnB = prompt(promptMessage, "1,2,3,4,5");
+    const placeholderMsg = (localStorage.getItem('B')) ? localStorage.getItem('B') : "1,2,3,4,5";
+    let columnB = prompt(promptMessage, placeholderMsg);
     console.log('columnB >>> ', columnB);
     const arrayColumnB = columnB.split(',');
     console.log('arrayColumnB >>> ', arrayColumnB);
@@ -134,7 +135,8 @@ console.log(hasCellChecked);
     if (hasCellChecked) {
         return alert(promptMessage);
     }
-    let columnI = prompt(promptMessage, "16,17,18,19,20");
+    const placeholderMsg = (localStorage.getItem('I')) ? localStorage.getItem('I') : "16,17,18,19,20";
+    let columnI = prompt(promptMessage, placeholderMsg);
     console.log(columnI);
     const arrayColumnI = columnI.split(',');
     console.log(arrayColumnI);
@@ -154,7 +156,8 @@ console.log(hasCellChecked);
     if (hasCellChecked) {
         return alert(promptMessage);
     }
-    let columnN = prompt(promptMessage, "31,32,33,34,35");
+    const placeholderMsg = (localStorage.getItem('N')) ? localStorage.getItem('N') : "31,32,33,34,35";
+    let columnN = prompt(promptMessage, placeholderMsg);
     console.log(columnN);
     const arrayColumnN = columnN.split(',');
     console.log(arrayColumnN);
@@ -174,7 +177,8 @@ console.log(hasCellChecked);
     if (hasCellChecked) {
         return alert(promptMessage);
     }
-    let columnG = prompt(promptMessage, "46,47,48,49,50");
+    const placeholderMsg = (localStorage.getItem('G')) ? localStorage.getItem('G') : "46,47,48,49,50";
+    let columnG = prompt(promptMessage, placeholderMsg);
     console.log(columnG);
     const arrayColumnG = columnG.split(',');
     console.log(arrayColumnG);
@@ -194,7 +198,8 @@ console.log(hasCellChecked);
     if (hasCellChecked) {
         return alert(promptMessage);
     }
-    let columnO = prompt(promptMessage, "61,62,63,64,65");
+    const placeholderMsg = (localStorage.getItem('O')) ? localStorage.getItem('O') : "61,62,63,64,65";
+    let columnO = prompt(promptMessage, placeholderMsg);
     console.log(columnO);
     const arrayColumnO = columnO.split(',');
     console.log(arrayColumnO);
