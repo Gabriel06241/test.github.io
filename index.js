@@ -25,6 +25,8 @@ const winningPositions = [
 
 let arr = Array.apply(null, { length: 25 }).map(Number.call, Number);
 
+console.log('arr >>> ', arr);
+
 let iterator = 0;
 
 for (let i = 0;i < 5;++i) {
@@ -53,6 +55,13 @@ for (let i = 0;i < 5;++i) {
         iterator++;
     }
 }
+
+if (localStorage.getItem('B')) fillColumns(localStorage.getItem('B').split(','), 0)
+if (localStorage.getItem('I')) fillColumns(localStorage.getItem('I').split(','), 1)
+if (localStorage.getItem('N')) fillColumns(localStorage.getItem('N').split(','), 2)
+if (localStorage.getItem('G')) fillColumns(localStorage.getItem('G').split(','), 3)
+if (localStorage.getItem('O')) fillColumns(localStorage.getItem('O').split(','), 4)
+
 const cell = document.querySelectorAll(".main-table-cell");
 
 // let winningIterator = 0
@@ -105,16 +114,17 @@ letterB.addEventListener("click", () => {
         return alert(promptMessage);
     }
     let columnB = prompt(promptMessage, "1,2,3,4,5");
-    console.log(columnB);
+    console.log('columnB >>> ', columnB);
     const arrayColumnB = columnB.split(',');
-    console.log(arrayColumnB);
+    console.log('arrayColumnB >>> ', arrayColumnB);
     const inputValidatedMessage = validateInputValues(arrayColumnB, 1, 15);
-    console.log(inputValidatedMessage);
+    console.log('inputValidatedMessage >>> ', inputValidatedMessage);
     if (inputValidatedMessage) {
         return alert(inputValidatedMessage)
     }
 
     let startIndexColumnB = 0;
+    window.localStorage.setItem('B', arrayColumnB);
     fillColumns(arrayColumnB, startIndexColumnB);
 })
 
@@ -134,6 +144,7 @@ console.log(hasCellChecked);
     }
     
     let startIndexColumnI = 1;
+    window.localStorage.setItem('I', arrayColumnI);
     fillColumns(arrayColumnI, startIndexColumnI);
 })
 
@@ -153,6 +164,7 @@ console.log(hasCellChecked);
     }
 
     let startIndexColumnN = 2;
+    window.localStorage.setItem('N', arrayColumnN);
     fillColumns(arrayColumnN, startIndexColumnN);
 })
 
@@ -172,6 +184,7 @@ console.log(hasCellChecked);
     }
 
     let startIndexColumnG = 3;
+    window.localStorage.setItem('G', arrayColumnG);
     fillColumns(arrayColumnG, startIndexColumnG);
 })
 
@@ -191,6 +204,7 @@ console.log(hasCellChecked);
     }
 
     let startIndexColumnO = 4;
+    window.localStorage.setItem('O', arrayColumnO);
     fillColumns(arrayColumnO, startIndexColumnO);
 })
 
@@ -218,28 +232,28 @@ function fillColumns(arrayColumn, startIndexColumn) {
     }
 }
 
-function mathcWin() {
-    const cell = document.querySelectorAll(".main-table-cell");
+// function mathcWin() {
+//     const cell = document.querySelectorAll(".main-table-cell");
 
-    console.log('cell #2 >>> ', cell)
-    console.log('winningPositions >>> ', winningPositions)
+//     console.log('cell #2 >>> ', cell)
+//     console.log('winningPositions >>> ', winningPositions)
 
-    return winningPositions.some(combination => {
-        console.log('combination >>> ', combination)
-        let ite = 0;
-        combination.forEach(index => {
-            console.log('cell[index] >>> ', cell[index])
-            if(cell[index].classList.contains("strickout")) {
-                ite++;
-            }
-        })
+//     return winningPositions.some(combination => {
+//         console.log('combination >>> ', combination)
+//         let ite = 0;
+//         combination.forEach(index => {
+//             console.log('cell[index] >>> ', cell[index])
+//             if(cell[index].classList.contains("strickout")) {
+//                 ite++;
+//             }
+//         })
 
-        if(ite === 5) {
-            let indexWin = winningPositions.indexOf(combination);
-            winningPositions.splice(indexWin, 1)
-        }
-        return combination.every(index => {
-            return cell[index].classList.contains("strickout")
-        })
-    })
-}
+//         if(ite === 5) {
+//             let indexWin = winningPositions.indexOf(combination);
+//             winningPositions.splice(indexWin, 1)
+//         }
+//         return combination.every(index => {
+//             return cell[index].classList.contains("strickout")
+//         })
+//     })
+// }
