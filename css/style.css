@@ -7,22 +7,41 @@ body:focus {
    outline: none;
 }
 
-body { 
-   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); 
-   /* min-height: 100vh;  */
+body {
+   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+   min-height: 110vh; 
    /* overflow: hidden; */
-   overflow-y: hidden; /* Hide vertical scrollbar */
-   overflow-x: hidden; /* Hide horizontal scrollbar */
+   overflow-y: hidden;
+   overflow-x: hidden;
 }
 
 #confetti-canvas {
+   padding-left: 0;
+   padding-right: 0;
+   margin-left: auto;
+   margin-right: auto;
    position: absolute;
-   display: inline-block;
+   display: block;
    text-align: center;
    z-index: -1;
-   overflow: hidden; /* Hide scrollbars */
-   pointer-events: none;
+   /* pointer-events: none; */
+   overflow-y: hidden;
+   overflow-x: hidden;
 }
+
+/* #confetti-canvas {
+   position: absolute;
+   padding-left: 0;
+   padding-right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+   width: 1450;
+   height: 1000;
+   z-index: -1;
+   overflow-y: hidden;
+   overflow-x: hidden;
+} */
 
 .container {
    /* width: 100vw; */
@@ -32,7 +51,8 @@ body {
    align-items: center;
    /* z-index: -1; */
    margin: auto;
-   /* overflow: hidden; */
+   overflow-y: hidden;
+   overflow-x: hidden;
 }
 
 #tblbingo {
@@ -131,7 +151,8 @@ footer {
 }
 
 button {
-   background-color: #33b2b2; /* Green */
+   background-color: #33b2b2;
+   /* Green */
    border: none;
    color: white;
    padding: 15px 32px;
