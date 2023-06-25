@@ -1,0 +1,147 @@
+/* body {
+   margin: auto;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+body:focus {
+   outline: none;
+}
+
+body { 
+   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); 
+   /* min-height: 100vh;  */
+   /* overflow: hidden; */
+   overflow-y: hidden; /* Hide vertical scrollbar */
+   overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+#confetti-canvas {
+   position: absolute;
+   display: inline-block;
+   text-align: center;
+   z-index: -1;
+   overflow: hidden; /* Hide scrollbars */
+   pointer-events: none;
+}
+
+.container {
+   /* width: 100vw; */
+   /* position: relative; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* z-index: -1; */
+   margin: auto;
+   /* overflow: hidden; */
+}
+
+#tblbingo {
+   border-collapse: collapse;
+   height: 40rem;
+   width: 40rem;
+   text-align: center;
+   font-size: 24pt;
+   cursor: pointer;
+   display: table;
+}
+
+#tblbingo td {
+   padding: 0.5rem;
+}
+
+.cell-format {
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 20%;
+   border: 0.5px solid #33b2b2;
+}
+
+.cell-format-background {
+   /* height: 100%; */
+   border-radius: 30%;
+   margin: 55px;
+   /* border: 0px; */
+   background-color: #33b2b2;
+   /* background-color: aquamarine; */
+}
+
+.cell-format:hover {
+   background-color: rgba(52, 178, 178, 0.3);
+   /* background-color: #fcfcfc; */
+   /* background-color: aquamarine; */
+   /* pointer-events: none; */
+}
+
+.letter-div {
+   height: 20vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.letters-bingo {
+   padding: 0 1.3rem;
+   font-size: 40pt;
+   display: none;
+}
+
+.strickout {
+   /* text-decoration: line-through; */
+   color: #fcfcfc;
+   font-size: 22pt;
+   /* pointer-events: none; */
+}
+
+.bingo-card-number {
+   /* height: 100%; */
+   border-radius: 30%;
+   margin: 55px;
+   /* border: 0px; */
+   background-color: #1e84acae;
+   /* background-color: aquamarine; */
+   color: white;
+   font-size: 22pt;
+}
+
+.show-bingo {
+   display: inline;
+}
+
+.table-title {
+   font-size: 24pt;
+   font-weight: bold;
+}
+
+.table-subtitle {
+   font-size: 12pt;
+}
+
+.cell-bingo-background {
+   background-image: url('images/bingo.png');
+   /* background-size: cover; */
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+}
+
+footer {
+   text-align: center;
+   margin: 20px;
+}
+
+button {
+   background-color: #33b2b2; /* Green */
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   font-weight: bold;
+}
+
+button:hover {
+   background-color: rgba(25, 185, 185, 0.8);
+}
