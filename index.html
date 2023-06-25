@@ -7,10 +7,13 @@
     <title>BINGO</title>
     <link rel="icon" type="image/x-icon" href="./images/bingo.ico">
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <script src="index.js" defer></script>
+    <script src="./js/confetti.js"></script>
+    <script src="./js/index.js" defer></script>
+    <!-- <canvas id="confetti-canvas" style="text-align:center;display:inline-block;z-index: -1;position: absolute;" width="1650vw" height="500vh"></canvas> -->
+    <canvas id="confetti-canvas" width="1650vw" height="500vh"></canvas>
     <div class="container">
       <table id="tblbingo">
         <tr class="table-title">
@@ -40,8 +43,8 @@
         </table>
       </div> -->
     </div>
+    <!-- <button id="save">Guardar</button> -->
     <footer>
-      <!-- <button id="save">Guardar</button> -->
       <button id="clean">Limpiar</button>
     </footer>
   </body>
